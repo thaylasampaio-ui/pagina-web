@@ -23,7 +23,9 @@
             padding: 16px;
             display: flex;
         }
-
+        article{
+            display: flex;
+        }
         img {
             width: 80px;
             height: 80px;
@@ -42,23 +44,61 @@
     </header>
     <main>
         <article>
-            <img src="imagem-blog.png" alt="alguma coisa">
+            <img src="WhatsApp Image 2026-08-31 at 22.45.49.jpeg" alt="alguma coisa">
             <div>
-                <h2>sla</h2>
-                <p>sla</p>
+                <h2>Gato Scottish Fold</h2>
                 <p>sla</p>
                 <button>👍 <span>0</span></button>
                 <button>👎<span>0</span></button>
             </div>
         </article>
         <article>
-            <img src="imagem-blog.png" alt="alguma coisa">
+            <img src="" alt="alguma coisa">
             <div>
-                <h2>sla</h2>
-                <p>sla</p>
+                <h3>Gato Siberiano</h3>
                 <p>sla</p>
                 <button>👍 <span>0</span></button>
                 <button>👎<span>0</span></button>
+            </div>
+        </article>
+        <article>
+            <img src="WhatsApp Image 2026-08-31 at 22.58.52.jpeg" alt="alguma coisa">
+            <div>
+                <h4>Gato Ragdoll</h4>
+                <p>sla</p>
+                <button>👍 <span>0</span></button>
+                <button>👎<span>0</span></button>
+            </div>
+        </article>
+        <article>
+            <img src="" alt="alguma coisa">
+            <div>
+                <h5>sla</h5>
+                <p>sla</p>
+                <button>👍 <span>0</span></button>
+                <button>👎<span>0</span></button>
+            </div>
+        </article>
+        <article>
+            <img src="" alt="alguma coisa">
+            <div>
+                <h6>sla</h6>
+                <p>sla</p>
+                <button>👍 <span>0</span></button>
+                <button>👎<span>0</span></button>
+            </div>
+        </article>
+        <article>
+            <div>
+                <h7>video</h7>
+                <inframe 
+                     width="560"
+                     height="315"
+              src="https://www.youtube.com/embed/f7LXpymMUls"     
+                    title="video"  
+                    frameborder="0"
+                    allowfullscreen>
+                </inframe>
             </div>
         </article>
     </main>
@@ -67,11 +107,18 @@
     const botoes = document.querySelectorAll("button");
 
     botoes.forEach(function (botao) {
+        let curtiu = false;
         botao.addEventListener("click", botaoClicado): botao
         function botaoClicado() {
             console.log("fui clicado");
             let texto = botao.querySeletor("span");
-            texto.textContent++;
+            if (curtiu === false){
+                texto.textContent++;
+                curtiu = true;
+            } else{ 
+            texto.textContent--;
+            curtiu = false;
+                 }
         }
     })
 
