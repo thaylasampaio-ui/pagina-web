@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,13 +25,13 @@
         }
 
         img {
-           width: 80px;
-           height: 80px;
+            width: 80px;
+            height: 80px;
         }
+
         .artigo-auto {
             font-weight: bold;
         }
-
     </style>
 </head>
 
@@ -40,25 +41,41 @@
         <p>compartilhar</p>
     </header>
     <main>
-        <img src="imagem-blog.png" 
-            alt="alguma coisa">
-        <div>
-            <h2>sla</h2>
-            <p>sla</p>
-            <p>sla</p>
-            <button>❤️ <span>0</span></button>
-        </div>
-
+        <article>
+            <img src="imagem-blog.png" alt="alguma coisa">
+            <div>
+                <h2>sla</h2>
+                <p>sla</p>
+                <p>sla</p>
+                <button>👍 <span>0</span></button>
+                <button>👎<span>0</span></button>
+            </div>
+        </article>
+        <article>
+            <img src="imagem-blog.png" alt="alguma coisa">
+            <div>
+                <h2>sla</h2>
+                <p>sla</p>
+                <p>sla</p>
+                <button>👍 <span>0</span></button>
+                <button>👎<span>0</span></button>
+            </div>
+        </article>
     </main>
 </body>
 <script>
-    const botao = document.querySelector("button");
-    botao.addEventListener("click", botaoClicado):botao
+    const botoes = document.querySelectorAll("button");
 
-    function botaoClicado(){
-        console.log("fui clicado");
-        let texto = botao.querySeletor("span");
-        texto.textContent++;
-    }
+    botoes.forEach(function (botao) {
+        botao.addEventListener("click", botaoClicado): botao
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySeletor("span");
+            texto.textContent++;
+        }
+    })
+
+
 </script>
+
 </html>
